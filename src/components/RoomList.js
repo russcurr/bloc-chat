@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './RoomList.css'
 
 
 class RoomList extends Component {
@@ -30,11 +31,15 @@ class RoomList extends Component {
     });
   }
 
+  handleChange(e) {
+    this.setState({newRoomName: e.target.value})
+  }
+
 
 
   render() {
     return(
-      <section>
+      <section id="chat-rooms">
         {
           this.state.rooms.map( (room, index) =>
           <li className="Rooms" key={index}>
@@ -44,13 +49,14 @@ class RoomList extends Component {
 
           )
         }
-        <section>
-          <form>
-            <h1>Create Room</h1>
-            <input type="text" />
-            <input type="submit" value="Submit" onSubmit={ (e) => this.createNewRoom(e) } />
-          </form>
-        </section>
+        <div>
+          <h2>Create Room</h2>
+            <form className="text-entry">
+
+              <input  type="text" value={this.state.newRoomName} onSubmit={ (e) => this.createNewRoom(e) } onChange={ (e) => this.handleChange(e)} />
+              <input  type="submit" value="Submit"  />
+              </form>
+        </div>
 
 
       </section>
