@@ -25,8 +25,9 @@ class App extends Component {
     return (
       <div className="App">
         <main>
+          <h1>Bloc Chat</h1>
           <RoomList firebase={firebase} />
-            <h1>Bloc Chat</h1>
+
 
         </main>
 
