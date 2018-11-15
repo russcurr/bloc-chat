@@ -39,7 +39,7 @@ class RoomList extends Component {
 
   render() {
     return(
-      <section id="chat-rooms">
+      <section className="chat-rooms">
         {
           this.state.rooms.map( (room, index) =>
           <li className="Rooms" key={index}>
@@ -51,9 +51,9 @@ class RoomList extends Component {
         }
         <div>
           <h2>Create Room</h2>
-            <form className="text-entry">
+            <form className="text-entry" onSubmit={ (e) => this.createNewRoom(e) } onChange={ (e) => this.handleChange(e)}>
 
-              <input  type="text" value={this.state.newRoomName} onSubmit={ (e) => this.createNewRoom(e) } onChange={ (e) => this.handleChange(e)} />
+              <input  type="text" value={this.state.newRoomName}  />
               <input  type="submit" value="Submit"  />
               </form>
         </div>
