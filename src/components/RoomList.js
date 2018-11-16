@@ -55,7 +55,7 @@ class RoomList extends Component {
         <div className="chat-rooms">
           {
           this.state.rooms.map( (room, index) =>
-          <li className="Rooms" key={index}>
+          <li className="Rooms" key={index} onClick={() => this.props.setActiveRoom(room)}>
             Room: {index + 1}
 
           </li>
@@ -64,6 +64,7 @@ class RoomList extends Component {
           }
         </div>
         <div>
+
         </div>
 
 

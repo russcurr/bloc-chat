@@ -22,8 +22,8 @@ class MessageList extends Component {
   render() {
     return(
       <section>
-        <div>List the Chat Rooms
-        <li> onClick={() => this.props.setActiveRoom(room)} </li>
+        <div>
+
         </div>
       </section>
     )
