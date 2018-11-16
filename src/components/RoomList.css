@@ -1,28 +1,48 @@
 h2 {
-  text-align: left;
-  font-size: 24px;
-  font-family: sans-serif;
+  text-align: center;
+  font-size: 32px;
+  font-family: serif;
   padding: 10px;
-  margin: 1px;
+  margin: 10px;
+  width: 38%;
+
 }
 
 .text-entry {
   text-align: left;
-  margin: auto;
-  padding: 4px;
+  margin: 10px;
+  padding: 10px 20px;
+  width: 20%;
+  font-size: 14px;
+  font-family: serif;
+}
+
+.submission {
+  background-color: silver;
+  color: black;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: serif;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 
 .chat-rooms {
   text-align: left;
-  margin: 20px;
-  font-size: 18px;
-  font-family: sans-serif;
+  margin: 10px;
+  font-size: 24px;
+  font-family: serif;
   border-style: double;
   border-color: black;
-  border-width: thick;
-  padding-top: 4px;
-  padding-bottom: 500px;
-  padding-left: 4px;
-  width: 25%;
+  border-width: medium;
+  padding-top: 15px;
+  padding-bottom: 150px;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 39%;
+  background-color: silver;
 }
