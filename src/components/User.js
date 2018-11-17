@@ -25,7 +25,7 @@ class User extends Component {
   render(){
     return(
         <div>
-          <p className="username">{this.props.user}</p>
+          <p className="username">{this.props.user ? this.props.user.displayName : "Guest"}</p>
           <button className="sign-in" onClick={this.signIn.bind(this)}>Sign In</button>
           <button className="sign-out" onClick={this.signOut.bind(this)}>Sign Out</button>
         </div>
