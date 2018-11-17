@@ -28,7 +28,7 @@ class App extends Component {
 
     setActiveRoom(room) {
       this.setState({
-        activeRoom: room
+        activeRoom: room,
       });
     }
 
@@ -38,13 +38,14 @@ class App extends Component {
       <div className="App">
         <main>
           <h1>Bloc Chat</h1>
-          <section>
-            <RoomList firebase={firebase}
+          <section className="col-sm-4">
+            <RoomList  firebase={firebase}
+            setActiveRoom={this.setActiveRoom.bind(this)}
             />
           </section>
-          <section>
-            <MessageList firebase={firebase}
-            setActiveRoom={this.setActiveRoom.bind(this)}
+          <section className="col-sm-8">
+            <MessageList  firebase={firebase}
+            activeRoom={this.state.activeRoom}
             />
           </section>
 

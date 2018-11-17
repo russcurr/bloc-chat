@@ -1,0 +1,16 @@
+h3 {
+  text-align: center;
+  font-size: 32px;
+  font-family: serif;
+  padding: 10px;
+  margin: 10px;
+
+
+}
+
+.MessList {
+  background-color: white;
+  float: right;
+  width: 70%;
+  border: 2px solid black;
+}
