@@ -55,26 +55,26 @@ class MessageList extends Component {
       <section>
         <div>
           <h3>Message List</h3>
-            <ul className="MessList">
+            <div className="MessList">
             {
             this.state.messages.filter(message => message.roomId === this.props.activeRoom.key).map( (message, index) =>
             <div key={index}>
-              <li>{message.username}</li>
-              <li>{message.content}</li>
-              <li>{message.sentAt}</li>
-              <li>{message.roomId}</li>
+              <p>{message.username}</p>
+              <p>{message.content}</p>
+              <p>{message.sentAt}</p>
+              <p>{message.roomId}</p>
             </div>
             )
           }
-            </ul>
+            </div>
 
-          <div>
-            <form onSubmit={(e) => this.createNewMessage(e)} >
+
+            <form className="submit-message" onSubmit={(e) => this.createNewMessage(e)} >
               <input type="text" placeholder="New Message" value={this.state.newMessage}
                onChange={(e) => this.handleSubmit(e)} />
               <input type="submit" value="Send" />
             </form>
-          </div>
+          
 
         </div>
       </section>

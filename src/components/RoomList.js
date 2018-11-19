@@ -56,7 +56,7 @@ class RoomList extends Component {
           {
           this.state.rooms.map( (room, index) =>
           <li className="Rooms" key={index} onClick={() => this.handleClick(room)}>
-            Room: {index + 1} {room.name}
+             {room.name}
 
           </li>
 
