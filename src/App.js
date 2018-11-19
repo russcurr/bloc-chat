@@ -26,7 +26,7 @@ class App extends Component {
         user: null
       };
       this.setActiveRoom = this.setActiveRoom.bind(this);
-      
+    
     }
 
     setActiveRoom(room) {
@@ -59,7 +59,10 @@ class App extends Component {
 
           <section className="col-sm-8">
             <MessageList  firebase={firebase}
-              activeRoom={this.state.activeRoom}/>
+              activeRoom={this.state.activeRoom}
+              user={this.state.user}
+
+              />
           </section>
 
 
