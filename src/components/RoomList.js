@@ -27,6 +27,7 @@ class RoomList extends Component {
     this.roomsRef.push({
         name: this.state.newRoomName
     });
+    e.preventDefault();
     this.setState({ newRoomName: ''})
   }
 
@@ -37,6 +38,8 @@ class RoomList extends Component {
   handleClick(room) {
     this.props.setActiveRoom(room);
   }
+
+  
 
 
   render() {
@@ -55,8 +58,9 @@ class RoomList extends Component {
         <div className="chat-rooms">
           {
           this.state.rooms.map( (room, index) =>
-          <li className="Rooms" key={index} onClick={() => this.handleClick(room)}>
+          <li className="Rooms" key={index} onClick={() => this.handleClick(room)} deleteRoom={() => this.deleteRoom(index)}>
              {room.name}
+             <input type="button" value= "X" onClick={ this.deleteRoom } />
 
           </li>
 

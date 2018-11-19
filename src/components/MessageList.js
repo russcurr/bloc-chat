@@ -35,6 +35,7 @@ class MessageList extends Component {
         roomId: this.props.activeRoom.key,
         sentAt: this.props.firebase.database.ServerValue.TIMESTAMP
     });
+    e.preventDefault();
     this.setState({newMessage: ''})
   }
 
@@ -74,7 +75,7 @@ class MessageList extends Component {
                onChange={(e) => this.handleSubmit(e)} />
               <input type="submit" value="Send" />
             </form>
-          
+
 
         </div>
       </section>
