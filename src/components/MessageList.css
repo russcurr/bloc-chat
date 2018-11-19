@@ -11,6 +11,6 @@ h3 {
 .MessList {
   background-color: white;
   float: right;
-  width: 70%;
+  width: auto;
   border: 2px solid black;
 }

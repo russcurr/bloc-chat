@@ -46,7 +46,8 @@ class RoomList extends Component {
           <h2>Create Room</h2>
             <form  onSubmit={ (e) => this.createNewRoom(e) } >
 
-              <input  className="text-entry" type="text" value={this.state.newRoomName} placeholder="Create New Room" onChange={ (e) => this.handleSubmit(e)} />
+              <input  className="text-entry" type="text" value={this.state.newRoomName}
+              placeholder="Create New Room" onChange={ (e) => this.handleSubmit(e)} />
               <input  className="submission" type="submit" value="Submit"  />
             </form>
         </div>
@@ -55,7 +56,7 @@ class RoomList extends Component {
           {
           this.state.rooms.map( (room, index) =>
           <li className="Rooms" key={index} onClick={() => this.handleClick(room)}>
-            Room: {index + 1}
+            Room: {index + 1} {room.name}
 
           </li>
 
